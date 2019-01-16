@@ -158,5 +158,47 @@ int main(int argc, char const *argv[]) {
 
         std::cout << k << std::endl;}
 
+        {// Write a program that stores 3 sides of a cuboid as variables (doubles)
+    // The program should write the surface area and volume of the cuboid like:
+    //
+    // Surface Area: 600
+    // Volume: 1000
+
+    double le = 30;
+    double wi = 20;
+    double he = 10;
+    double surfacearea = 2 * ((le * wi) + (wi * he) + (he * le));
+    std::cout << "Surface Area " << surfacearea << std::endl;
+    double Volume = le * wi * he;
+    std::cout << "Volume: " << Volume << std::endl;
+        }
+
+    {
+        int currentHours = 14;
+        int currentMinutes = 34;
+        int currentSeconds = 42;
+
+        // Write a program that prints the remaining seconds (as an integer) from a
+        // day if the current time is represented by the variables
+        int remaining = (24 * 60 * 60) - (14 * 60 * 60 + 34 * 60 + 42);
+        std::cout << remaining << std::endl;
+    }
+    {
+        // Modify this program to greet user instead of the World!
+        // The program should ask for the name of the user
+        std::string myname;
+        std::cout << "What is your name?" << std::endl;
+        std::cin >> myname;
+        std::cout << "Hello " << myname << std::endl;
+    }
+    {
+        // Write a program that asks for an integer that is a distance in kilometers,
+        // then it converts that value to miles and prints it
+        int kilometer;
+        std::cout << "How far did you travel (in km)?";
+        std::cin >> kilometer;
+        kilometer *= 0.621371192;
+        std::cout << "So, you have traveled " << kilometer << " miles" << std::endl;
+    }
     return 0;
 }
