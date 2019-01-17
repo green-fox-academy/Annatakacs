@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Varro Judit/Desktop/greenfoxacademy/Annatakacs/week-01/day-04/change_element/main.cpp
+iostream
+-
+string
+-
+
