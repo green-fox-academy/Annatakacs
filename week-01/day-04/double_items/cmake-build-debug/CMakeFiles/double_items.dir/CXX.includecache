@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/takacsanna/Desktop/greenfoxacademy/greenfoxacademy/week-01/day-04/double_items/main.cpp
+iostream
+-
+string
+-
+
