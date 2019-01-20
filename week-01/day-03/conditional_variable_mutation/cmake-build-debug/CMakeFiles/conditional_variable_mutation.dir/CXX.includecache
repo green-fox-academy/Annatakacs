@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/takacsanna/Desktop/Coding/C/week-01/day-03/conditional_variable_mutation/main.cpp
+iostream
+-
+string
+-
+
