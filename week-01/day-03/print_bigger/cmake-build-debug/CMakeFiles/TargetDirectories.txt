@@ -1,0 +1,3 @@
+/Users/takacsanna/Desktop/Coding/C/week-01/day-03/print_bigger/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/takacsanna/Desktop/Coding/C/week-01/day-03/print_bigger/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/takacsanna/Desktop/Coding/C/week-01/day-03/print_bigger/cmake-build-debug/CMakeFiles/print_bigger.dir
