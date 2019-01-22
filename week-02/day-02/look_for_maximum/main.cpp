@@ -27,7 +27,9 @@ int main()
             temp = array[i];
         }
     }
-    std::cout << "The biggest number is: " << temp << std::endl;
+    int *p_temp = &temp;
+    std::cout << "The biggest number is: " << *p_temp << std::endl;
+    std::cout << "The biggest number is: " << p_temp << std::endl;
 
     return 0;
 }
