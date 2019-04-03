@@ -13,11 +13,11 @@ int main(int argc, char *args[]) {
     //
     // The pyramid should have as many lines as the number was
 
-    int rows = 5;
-    int space;
+    int rows;
 
-    //std::cout << "Please give me a number" << std::endl;
-    //std::cin >> rows;
+
+    std::cout << "Please give me a number" << std::endl;
+    std::cin >> rows;
 
     for (int i = 1; i <= rows; i++) {
         for (int space = i; space < rows; space++) {
