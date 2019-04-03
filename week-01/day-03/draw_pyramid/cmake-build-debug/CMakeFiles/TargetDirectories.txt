@@ -1,0 +1,3 @@
+/Users/takacsanna/Desktop/ferrilata/radars/annatakacs/week-01/day-03/draw_pyramid/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/takacsanna/Desktop/ferrilata/radars/annatakacs/week-01/day-03/draw_pyramid/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/takacsanna/Desktop/ferrilata/radars/annatakacs/week-01/day-03/draw_pyramid/cmake-build-debug/CMakeFiles/draw_pyramid.dir
