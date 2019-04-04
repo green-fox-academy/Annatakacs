@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/takacsanna/Desktop/greenfoxacademy/greenfoxacademy/week-01/day-04/double_items/main.cpp" "/Users/takacsanna/Desktop/greenfoxacademy/greenfoxacademy/week-01/day-04/double_items/cmake-build-debug/CMakeFiles/double_items.dir/main.cpp.o"
+  "/Users/takacsanna/Desktop/ferrilata/radars/annatakacs/week-01/day-04/double_items/main.cpp" "/Users/takacsanna/Desktop/ferrilata/radars/annatakacs/week-01/day-04/double_items/cmake-build-debug/CMakeFiles/double_items.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

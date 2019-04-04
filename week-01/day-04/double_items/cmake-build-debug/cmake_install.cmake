@@ -1,4 +1,4 @@
-# Install script for directory: /Users/takacsanna/Desktop/greenfoxacademy/greenfoxacademy/week-01/day-04/double_items
+# Install script for directory: /Users/takacsanna/Desktop/ferrilata/radars/annatakacs/week-01/day-04/double_items
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/takacsanna/Desktop/greenfoxacademy/greenfoxacademy/week-01/day-04/double_items/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/takacsanna/Desktop/ferrilata/radars/annatakacs/week-01/day-04/double_items/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
