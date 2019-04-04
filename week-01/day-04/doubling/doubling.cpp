@@ -11,7 +11,7 @@ int main(int argc, char* args[]) {
 }
 
 int doubling(int baseNum) {
-    return baseNum*2;
+    return baseNum*=2;
 }
 
 
