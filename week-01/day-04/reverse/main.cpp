@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 
-
 int main(int argc, char* args[]) {
 
     // - Create an array variable named `aj`
@@ -10,22 +9,18 @@ int main(int argc, char* args[]) {
     // - Print the elements of the reversed `aj`
 
     int aj[] = {3, 4, 5, 6, 7};
-    int size = ((sizeof aj)/(sizeof aj[0]));
-    int array[size];
+    int array[5];
 
-    for (int i = 0; i <= size; i++){
-    array[i] = aj[size-i];
-
-    }
-    for (int i = 0; i <= size; i++) {
-        aj[i] = array[i];
-    }
-
+    int size = sizeof(aj) / sizeof(aj[0]);
 
     for (int i = 0; i <= size; i++) {
-        std::cout << aj[i] << std::endl;
+        array[size-i] = aj[i];
     }
 
+    for (int j = 0; j <= size; j++) {
+        aj[j] = array[j];
+        std::cout << aj[j] << std::endl;
+    }
 
     return 0;
 }
