@@ -1,5 +1,8 @@
+
 #include <iostream>
 #include <string>
+
+void increment(int[], int);
 
 int main(int argc, char* args[]) {
 
@@ -10,9 +13,17 @@ int main(int argc, char* args[]) {
 
     int t[] = {1, 2, 3, 4, 5};
 
-    t[3] += 10;
+    int size = sizeof(t) / sizeof(t[0]);
 
-    std::cout << "The 3. element: " << t[3] << std::endl;
+    increment(t, size);
 
     return 0;
+}
+void increment(int x[], int y) {
+    for (int i = 0; i < y; i++) {
+        if (i == 2) {
+            x[i] = x[i] + 1;
+        }
+    }
+    std::cout << x[2] << std::endl;
 }

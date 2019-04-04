@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/increment_element.dir/main.cpp.obj"
+  "CMakeFiles/increment_element.dir/main.cpp.o"
   "increment_element.pdb"
-  "increment_element.exe"
-  "increment_element.exe.manifest"
-  "libincrement_element.dll.a"
+  "increment_element"
 )
 
 # Per-language clean rules from dependency scanning.
