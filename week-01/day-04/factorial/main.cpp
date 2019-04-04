@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-void factorio (int number, int& returnpara);
+void factorio (int, int&);
 
 int main(int argc, char* args[]) {
 
@@ -9,17 +9,23 @@ int main(int argc, char* args[]) {
     //   it should calculate its input's factorial.
     //   it should not return it, but take an additional integer parameter and overwrite its value.
 
-    int number = 5;
+    std::cout << "Please give me a number" << std::endl;
+    int number;
+    std::cin >> number;
+
     int returnpara;
+
     factorio(number, returnpara);
-    std::cout << returnpara << std::endl;
+
+
+    std::cout << "Your number's factorial is: " << returnpara << std::endl;
+
     return 0;
 }
-void factorio (int number, int& returnpara) {
+void factorio (int x, int& y) {
     int factorio = 1;
-    for (int i = 1; i<=number; ++i) {
+    for (int i = 1; i <= x; i++) {
         factorio *= i;
     }
-    returnpara = factorio;
+    y = factorio;
 }
-
