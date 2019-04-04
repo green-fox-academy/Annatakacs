@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/print_all.dir/main.cpp.obj"
+  "CMakeFiles/print_all.dir/main.cpp.o"
   "print_all.pdb"
-  "print_all.exe"
-  "print_all.exe.manifest"
-  "libprint_all.dll.a"
+  "print_all"
 )
 
 # Per-language clean rules from dependency scanning.

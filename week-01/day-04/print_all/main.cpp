@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 
+void print(int[], int);
+
 int main(int argc, char* args[]) {
 
     // - Create an array variable named `numbers`
@@ -8,10 +10,15 @@ int main(int argc, char* args[]) {
     // - Print all the elements of `numbers`
 
     int numbers[] = {4, 5, 6, 7};
+    int size = sizeof(numbers) / sizeof(numbers[0]);
 
-    for (int i=0; i <= 3; i++){
-        numbers[i]++;
-    std::cout << numbers[i] <<std::endl;}
+    print(numbers, size);
 
     return 0;
+}
+void print(int x[], int y) {
+    for (int i = 0; i < y; i++) {
+        std::cout << x[i] << std::endl;
+        x[i]++;
+    }
 }
