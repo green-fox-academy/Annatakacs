@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/append_a_func.dir/main.cpp.obj"
+  "CMakeFiles/append_a_func.dir/main.cpp.o"
   "append_a_func.pdb"
-  "append_a_func.exe"
-  "append_a_func.exe.manifest"
-  "libappend_a_func.dll.a"
+  "append_a_func"
 )
 
 # Per-language clean rules from dependency scanning.

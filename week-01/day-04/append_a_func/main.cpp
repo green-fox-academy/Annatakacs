@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-std::string appendAFunction(std::string typo);
+std::string appendAFunction(std::string, char);
 
 int main(int argc, char* args[]) {
 
@@ -12,10 +12,11 @@ int main(int argc, char* args[]) {
     // - Print the result of `appendAFunc(typo)`
 
     std::string typo = "Chinchill";
-    std::string result = appendAFunction(typo);
-    std::cout << result << std::endl;
+
+    char a = 'a';
+    std::cout << appendAFunction(typo, a) << std::endl;
     return 0;
 }
-std::string appendAFunction(std::string typo) {
-    return (typo+"a");
+std::string appendAFunction(std::string x, char y) {
+    return (x + y);
 }
