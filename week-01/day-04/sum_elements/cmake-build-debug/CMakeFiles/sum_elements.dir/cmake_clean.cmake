@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/sum_elements.dir/main.cpp.obj"
+  "CMakeFiles/sum_elements.dir/main.cpp.o"
   "sum_elements.pdb"
-  "sum_elements.exe"
-  "sum_elements.exe.manifest"
-  "libsum_elements.dll.a"
+  "sum_elements"
 )
 
 # Per-language clean rules from dependency scanning.

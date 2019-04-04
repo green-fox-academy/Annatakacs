@@ -1,7 +1,9 @@
+
 #include <iostream>
 #include <string>
 
-void sum(int r[]);
+//int sum(int[]);
+void sum(int[]);
 
 int main(int argc, char* args[]) {
 
@@ -10,11 +12,16 @@ int main(int argc, char* args[]) {
     // - Print the sum of the second and the third element
 
     int r[] = {54, 23, 66, 12};
+
+    //std::cout << sum(r) << std::endl;
+
     sum(r);
+    
     return 0;
 }
-void sum (int r[]){
-    int sum;
-    sum = r[2] + r[3];
-    std::cout << "the sum is: " << sum << std::endl;
+//int sum(int x[]) {
+   // return x[1] + x[2];
+//}
+void sum(int x[]) {
+    std::cout << x[1] + x[2] << std::endl;
 }
