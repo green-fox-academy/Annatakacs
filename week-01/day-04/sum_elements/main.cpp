@@ -16,7 +16,7 @@ int main(int argc, char* args[]) {
     //std::cout << sum(r) << std::endl;
 
     sum(r);
-    
+
     return 0;
 }
 //int sum(int x[]) {

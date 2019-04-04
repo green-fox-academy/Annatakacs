@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/change_element.dir/main.cpp.obj"
+  "CMakeFiles/change_element.dir/main.cpp.o"
   "change_element.pdb"
-  "change_element.exe"
-  "change_element.exe.manifest"
-  "libchange_element.dll.a"
+  "change_element"
 )
 
 # Per-language clean rules from dependency scanning.
