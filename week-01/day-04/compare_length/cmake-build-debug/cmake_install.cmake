@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Varro Judit/Desktop/greenfoxacademy/Annatakacs/week-01/day-04/compare_length
+# Install script for directory: /Users/takacsanna/Desktop/ferrilata/radars/annatakacs/week-01/day-04/compare_length
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/compare_length")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Varro Judit/Desktop/greenfoxacademy/Annatakacs/week-01/day-04/compare_length/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/takacsanna/Desktop/ferrilata/radars/annatakacs/week-01/day-04/compare_length/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

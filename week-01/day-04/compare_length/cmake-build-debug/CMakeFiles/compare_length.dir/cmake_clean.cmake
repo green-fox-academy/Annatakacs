@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/compare_length.dir/main.cpp.obj"
+  "CMakeFiles/compare_length.dir/main.cpp.o"
   "compare_length.pdb"
-  "compare_length.exe"
-  "compare_length.exe.manifest"
-  "libcompare_length.dll.a"
+  "compare_length"
 )
 
 # Per-language clean rules from dependency scanning.

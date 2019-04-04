@@ -12,14 +12,11 @@ int main(int argc, char* args[]) {
     int p1[] = {1, 2, 3};
     int p2[] = {4, 5};
 
-    int result1 = ((sizeof (p1)) / (sizeof (p1[0])));
-    int result2 = ((sizeof (p2)) / (sizeof (p2[0])));
-
-    if (result1 < result2) {
+    if ((sizeof(p1) / sizeof(p1[0])) < (sizeof(p2) / sizeof(p2[0]))) {
         std::cout << "p2 has more elements than p1" << std::endl;
+    } else {
+        std::cout << "p1 has more elements than p2" << std::endl;
     }
-        else {
-            std::cout << "p1 has more elements than p2" << std::endl;
-    }
+
     return 0;
 }
