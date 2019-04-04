@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/summing.dir/main.cpp.obj"
+  "CMakeFiles/summing.dir/main.cpp.o"
   "summing.pdb"
-  "summing.exe"
-  "summing.exe.manifest"
-  "libsumming.dll.a"
+  "summing"
 )
 
 # Per-language clean rules from dependency scanning.
