@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 
+
 int main(int argc, char* args[]) {
 
     // - Create an array variable named `abc`
@@ -9,14 +10,16 @@ int main(int argc, char* args[]) {
 
     std::string abc[] = {"first", "second", "third"};
 
-    std::string temp;
-    temp = abc[0];
-    abc[0] = abc[2];
-    abc[2] = temp;
+    int size = sizeof(abc) / sizeof(abc[0]);
 
-    for (int i = 0; i < 3; i++){
+    std::string c = abc[0];
+    abc[0] = abc[2];
+    abc[2] = c;
+
+    for (int i = 0; i < size; i++) {
         std::cout << abc[i] << std::endl;
     }
+
 
     return 0;
 }
