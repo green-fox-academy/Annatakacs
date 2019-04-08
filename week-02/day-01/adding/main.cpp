@@ -13,6 +13,6 @@ int main()
     *aPointer += *bPointer;
 
     std::cout << *aPointer;
-    
+
     return 0;
 }
