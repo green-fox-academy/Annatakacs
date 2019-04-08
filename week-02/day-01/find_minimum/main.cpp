@@ -24,7 +24,7 @@ int *findMinimum(int x[], int y) {
     for (int i = 0; i < y; ++i) {
         for (int j = 0; j < y; ++j) {
            if (x[j] < x[j+1]) {
-               *z = x[j];
+               z = &x[j];
            }
         }
     }
