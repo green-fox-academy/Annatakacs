@@ -6,7 +6,7 @@ std::string xchange(std::string text, char x, char y);
 
 int main() {
 
-    std::string text = "Alexa";
+    std::string text = "Axlxexax";
 
     //std::string::iterator it = text.begin();
 
@@ -24,7 +24,7 @@ std::string xchange(std::string text, char x, char y) {
         return newtext;
     } else if (text.at(0) == x) {
         newtext = y;
-        return newtext + xchange(text.substr(1, 1), x, y);
+        return newtext + xchange(text.substr(1, text.size()), x, y);
     } else {
         newtext = text.at(0);
         return newtext + xchange(text.substr(1, text.size()), x, y);
