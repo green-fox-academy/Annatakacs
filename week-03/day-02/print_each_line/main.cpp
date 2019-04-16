@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <exception>
 
 int main () {
     // Write a program that opens a file called "my-file.txt", then prints
@@ -11,11 +10,10 @@ int main () {
     std::ifstream myFile;
     myFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
 
-    std::string text;
-
     try {
         myFile.open("../my-file.txt");
-        getline(myFile, text, '.');
+        std::string text;
+        std::getline(myFile, text, '.');
         std::cout << text << std::endl;
         myFile.close();
 
