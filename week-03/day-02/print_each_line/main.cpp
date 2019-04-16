@@ -8,15 +8,15 @@ int main () {
     // You will have to create the file, you may use C-programming, although it is not mandatory
 
     std::ifstream myFile;
-    myFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
+    myFile.exceptions(std::ifstream::badbit);
 
     try {
         myFile.open("../my-file.txt");
         std::string text;
-        std::getline(myFile, text, '.');
-        std::cout << text << std::endl;
+        while(  getline(myFile, text)) {
+            std::cout << text << std::endl;
+        }
         myFile.close();
-
     } catch (std::ifstream::failure& e) {
         std::cerr << e.what() << std::endl;
     }
