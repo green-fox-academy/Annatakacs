@@ -1,17 +1,35 @@
 #include <iostream>
 #include "Counter.h"
 
-int main()
+void checkValue(const std::string& name, int expected, int actual)
 {
-    Counter randomnumber(30);
+    if(expected != actual) {
+        std::cout << name << "Failed! Expected: " << expected << " Actual: " << actual << std::endl;
+    }
+    else {
+        std::cout << name << "Passed!" << std::endl;
+    }
+}
 
-    std::cout << randomnumber.get() << std::endl;
-    randomnumber.add();
-    std::cout << randomnumber.get() << std::endl;
-    randomnumber.add(20);
-    std::cout << randomnumber.get() << std::endl;
-    randomnumber.reset();
-    std::cout << randomnumber.get() << std::endl;
+int main(int argc, char* args[])
+{
+    Counter c;
+    checkValue("getZero", 0, c.get());
+
+    c.add(5);
+    checkValue("addMore", 5, c.get());
+
+    c.add();
+    checkValue("addOne", 6, c.get());
+
+    c.reset();
+    checkValue("getZero2", 0, c.get());
+
+    Counter c2(7);
+    checkValue("getInit", 7, c2.get());
+
+    c2.reset();
+    checkValue("reset", 7, c2.get());
 
     return 0;
 }
