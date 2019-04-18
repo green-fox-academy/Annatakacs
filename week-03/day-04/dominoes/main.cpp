@@ -3,7 +3,6 @@
 
 #include "domino.h"
 
-
 std::vector<Domino> initializeDominoes()
 {
     std::vector<Domino> dominoes;
@@ -16,25 +15,33 @@ std::vector<Domino> initializeDominoes()
     return dominoes;
 }
 
-void organiseDominoes(std::vector<Domino> dominoes);
+void swapDominoes(Domino &x, Domino &y);
 
-int main(int argc, char *args[])
+int main(int argc, char* args[])
 {
     std::vector<Domino> dominoes = initializeDominoes();
-
     // You have the list of Dominoes
     // Order them into one snake where the adjacent dominoes have the same numbers on their adjacent sides
     // eg: [2, 4], [4, 3], [3, 5] ...
 
+    for (unsigned int i = 0; i < (dominoes.size() - 1); i++) {
+        for (unsigned int j = 1; j < (dominoes.size() - i); j++) {
+            if (dominoes.at(i).getValues().second == dominoes.at(i + j).getValues().first) {
+                swapDominoes(dominoes[i+1], dominoes[i+j]);
+            }
+        }
+    }
+
+    for (unsigned int i = 0; i < dominoes.size(); i++) {
+        std::cout << dominoes.at(i).toString() << " ";
+    }
 
     return 0;
 }
 
-void organiseDominoes(std::vector<Domino> dominoes)
+void swapDominoes(Domino &x, Domino &y)
 {
-    for () {
-        int temp = _values.second;
-        if (_values.second == )
-    }
-
+    Domino temp = x;
+    x = y;
+    y = temp;
 }

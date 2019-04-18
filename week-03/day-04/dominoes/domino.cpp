@@ -14,4 +14,3 @@ std::string Domino::toString()
 {
     return "[" + std::to_string(_values.first) + ", " + std::to_string(_values.second) + "]";
 }
-
