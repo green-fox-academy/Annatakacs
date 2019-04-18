@@ -17,7 +17,7 @@ int main(int argc, char *args[])
         std::cout << diceSet.getCurrent(i) << " / ";
     }
 
-    std::cout << std::endl;
+    std::cout << "\n" << std::endl;
 
     int counter = 0;
 
@@ -34,7 +34,7 @@ int main(int argc, char *args[])
     }
 
     std::cout << std::endl;
-    
+
     std::cout << "After " << counter << " rolls, we have all the sixes";
 
     return 0;
