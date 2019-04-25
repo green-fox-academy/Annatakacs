@@ -1,5 +1,5 @@
 # Add all your .cpp files here (separated by spaces)
-add_executable(${PROJECT_TESTS_NAME} MyApp_test.cpp)
+add_executable(${PROJECT_TESTS_NAME} apples_test.cpp)
 
 # These lines include and link the GoogleTest libraries and your own library to the test executable
 add_subdirectory(${PATH_TO_GOOGLETEST} ${CMAKE_CURRENT_BINARY_DIR}/googletest)

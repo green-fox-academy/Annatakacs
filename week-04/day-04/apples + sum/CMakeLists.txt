@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.12)
 set(PROJECT_LIB_NAME apples_lib)
 
 # Change this to the name of the directory that contains your tests
-set(PROJECT_TESTS_NAME apples_tests)
+set(PROJECT_TESTS_NAME apples_test)
 
 # Change this to the path where you extracted the Google Test files to
 set(PATH_TO_GOOGLETEST "/Library/Frameworks/googletest/googletest")
