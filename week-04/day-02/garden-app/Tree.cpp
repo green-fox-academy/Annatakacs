@@ -4,27 +4,37 @@
 #include <iostream>
 #include "Tree.h"
 
-Tree::Tree(std::string color, float waterAmount)
+Tree::Tree(float waterAmount, std::string color) : Plant(
+        waterAmount, color)
 {
-    _waterAmount = waterAmount;
-};
+    _minWater = 10.0;
+    _absorbance = 0.4;
+    _needsWater = true;
+}
 
 Tree::Tree()
 {
+    _minWater = 10.0;
     _absorbance = 0.4;
 }
 
-int Tree::getwaterAmount()
+void Tree::getInfo()
 {
-    return _waterAmount;
+    if (_waterAmount < _minWater) {
+        std::cout << "The " << _color << " Tree needs water" << std::endl;
+        _needsWater = true;
+    } else {
+        std::cout << "The " << _color << " Tree doesn't need water" << std::endl;
+        _needsWater = false;
+    }
 }
 
-void Tree::setwaterAmount(float waterAmount)
+bool Tree::getNeedsWater()
 {
-    _waterAmount = waterAmount;
+    return _needsWater;
 }
 
-float Tree::getabsorbance()
+void Tree::getsWatered(int getsWater)
 {
-    return _absorbance;
+    _waterAmount += (_absorbance * getsWater);
 }

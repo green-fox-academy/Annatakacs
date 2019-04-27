@@ -6,23 +6,19 @@
 #define GARDEN_APP_FLOWER_H
 
 #include <iostream>
+#include "Plant.h"
 
-class Flower {
+class Flower : public Plant {
 public:
-    Flower(std::string color, float waterAmount);
+    Flower(float waterAmount, std::string color);
 
     Flower();
 
-    int getwaterAmount();
+    void getInfo();
 
-    float getabsorbance();
+    bool getNeedsWater() override;
 
-    void setwaterAmount(float waterAmount);
-
-private:
-    std::string _color;
-    float _waterAmount;
-    float _absorbance;
+    void getsWatered(int getsWater) override;
 
 };
 

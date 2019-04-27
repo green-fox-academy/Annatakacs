@@ -5,23 +5,28 @@
 
 int main()
 {
-    Flower yellow("yellow", 0);
-    Flower blue("blue", 6);
-    Tree purple("purple", 3);
-    Tree orange("orange", 12);
+    Flower flower1(3, "yellow");
+    Flower flower2(3, "blue");
+    Tree tree1(5, "purple");
+    Tree tree2(5, "orange");
 
-    Garden myGarden(40);
+    Garden garden;
+    garden.addMyPlants(&flower1);
+    garden.addMyPlants(&flower2);
+    garden.addMyPlants(&tree1);
+    garden.addMyPlants(&tree2);
 
-    myGarden.addFlower(yellow);
-    myGarden.addFlower(blue);
-    myGarden.addTree(purple);
-    myGarden.addTree(orange);
+    garden.getInfo();
+    std::cout << std::endl;
 
-    myGarden.info();
+    garden.water(40);
+    garden.getInfo();
+    std::cout << std::endl;
 
-    myGarden.watering(40);
+    garden.water(70);
+    garden.getInfo();
+    std::cout << std::endl;
 
-    myGarden.info();
 
     return 0;
 }

@@ -5,23 +5,19 @@
 #ifndef GARDEN_APP_TREE_H
 #define GARDEN_APP_TREE_H
 
+#include "Plant.h"
 
-class Tree {
+class Tree : public Plant{
 public:
-    Tree(std::string color, float waterAmount);
+    Tree(float waterAmount, std::string color);
 
     Tree();
 
-    int getwaterAmount();
+    void getInfo();
 
-    void setwaterAmount(float waterAmount);
+    bool getNeedsWater() override;
 
-    float getabsorbance();
-
-private:
-    std::string _color;
-    float _waterAmount;
-    float _absorbance;
+    void getsWatered(int getsWater) override;
 };
 
 

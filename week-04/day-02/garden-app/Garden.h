@@ -10,29 +10,19 @@
 #include "Tree.h"
 
 
-class Garden : public Flower, public Tree{
+class Garden : public Flower, public Tree {
 public:
-    Garden(int wateringAmount);
-
     Garden();
 
-    void addFlower(Flower flower);
+    void water(int getsWater);
 
-    void addTree(Tree tree);
+    void addMyPlants(Plant *plant);
 
-    int countWateringFlowers();
-
-    int countWateringTrees();
-
-    void watering(int wateringAmount);
-
-    void info();
+    void getInfo();
 
 private:
-    int _wateringAmount;
-    std::vector<Flower> _flowers;
-    std::vector<Tree> _trees;
-
+    std::vector<Plant *> _myPlants;
+    int _water;
 };
 
 
