@@ -17,11 +17,17 @@ public:
 
     int refill(int refill);
 
+    int refillIfNotEnough(int refill);
+
     std::string getType();
 
-    std::stringstream getStatus();
+    std::string getStatus();
+
+    int allDamage();
 
     bool isPriority();
+
+    int neededAmmo();
 
 protected:
     int _maxAmmo;

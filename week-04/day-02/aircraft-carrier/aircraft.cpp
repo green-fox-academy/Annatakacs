@@ -16,7 +16,16 @@ int Aircraft::fight()
 int Aircraft::refill(int refill)
 {
     int possible = (_maxAmmo - _ammo);
+    if (possible > refill) {
+        _ammo += possible;
+    }
     return (refill - possible);
+}
+
+int Aircraft::refillIfNotEnough(int refill)
+{
+    _ammo += refill;
+    return 0;
 }
 
 std::string Aircraft::getType()
@@ -28,11 +37,16 @@ std::string Aircraft::getType()
     }
 }
 
-std::stringstream Aircraft::getStatus()
+std::string Aircraft::getStatus()
 {
-    std::stringstream stream;
-    stream << "Type " << _type << ", Ammo: " << _ammo << ", Base Damage: " << _baseDamage << ", All Damage: " << (_ammo * _baseDamage);
+    std::string stream;
+    stream = "Type " + getType() + ", Ammo: " + std::to_string(_ammo) + ", Base Damage: " + std::to_string(_baseDamage) + ", All Damage: " + std::to_string(_ammo * _baseDamage);
     return stream;
+}
+
+int Aircraft::allDamage()
+{
+    return (_ammo * _baseDamage);
 }
 
 bool Aircraft::isPriority()
@@ -42,4 +56,9 @@ bool Aircraft::isPriority()
     else
         return false;
 
+}
+
+int Aircraft::neededAmmo()
+{
+    return (_maxAmmo - _ammo);
 }
