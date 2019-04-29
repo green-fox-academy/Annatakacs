@@ -7,6 +7,10 @@ class F35 : public Aircraft
 {
 public:
     F35();
+
+    bool isPriority() override;
+
+    std::string getType();
 };
 
 

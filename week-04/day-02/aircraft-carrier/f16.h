@@ -7,6 +7,10 @@ class F16 : public Aircraft
 {
 public:
     F16();
+
+    bool isPriority() override;
+
+    std::string getType();
 };
 
 

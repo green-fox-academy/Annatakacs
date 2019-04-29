@@ -22,19 +22,18 @@ void Carrier::fill()
     try {
         if (_storeOfAmmo == 0) {
             throw 1;
-        } else if (_storeOfAmmo > ammoNeeded) {
+        }
+        if (_storeOfAmmo < ammoNeeded) {
             for (int i = 0; i < _aircrafts.size(); ++i) {
-                _storeOfAmmo -= _aircrafts.at(i)->refill(_storeOfAmmo);
+                _storeOfAmmo = _aircrafts.at(i)->refillPriority(_storeOfAmmo);
             }
-        } else if (_storeOfAmmo < ammoNeeded) {
+        } else {
             for (int i = 0; i < _aircrafts.size(); ++i) {
-                if (_aircrafts.at(i)->isPriority() && _storeOfAmmo != 0) {
-                    _storeOfAmmo = _aircrafts.at(i)->refillIfNotEnough(_storeOfAmmo);
-                }
+                _storeOfAmmo = _aircrafts.at(i)->refill(_storeOfAmmo);
             }
         }
     } catch (int &e) {
-        std::cerr << "We are out of ammo" << std::endl;
+        std::cerr << "We are out of ammo!" << std::endl;
     }
 }
 

@@ -10,52 +10,46 @@ int Aircraft::fight()
 {
     int damage = (_baseDamage * _ammo);
     _ammo = 0;
-    return  damage;
+    return damage;
 }
 
 int Aircraft::refill(int refill)
 {
     int possible = (_maxAmmo - _ammo);
-    if (possible > refill) {
-        _ammo += possible;
-    }
-    return (refill - possible);
+    _ammo += possible;
+    int output = refill - possible;
+    return output;
 }
 
-int Aircraft::refillIfNotEnough(int refill)
+int Aircraft::refillPriority(int refill)
 {
-    _ammo += refill;
-    return 0;
-}
-
-std::string Aircraft::getType()
-{
-    if (_type == f16) {
-        return "F16";
+    if (isPriority()) {
+        int possible = (_maxAmmo - _ammo);
+        if (possible < refill) {
+            _ammo += possible;
+            int output = refill - possible;
+            return output;
+        } else {
+            _ammo += refill;
+            return 0;
+        }
     } else {
-        return "F35";
+        return refill;
     }
 }
 
 std::string Aircraft::getStatus()
 {
     std::string stream;
-    stream = "Type " + getType() + ", Ammo: " + std::to_string(_ammo) + ", Base Damage: " + std::to_string(_baseDamage) + ", All Damage: " + std::to_string(_ammo * _baseDamage);
+    stream =
+            "Type " + getType() + ", Ammo: " + std::to_string(_ammo) + ", Base Damage: " + std::to_string(_baseDamage) +
+            ", All Damage: " + std::to_string(_ammo * _baseDamage);
     return stream;
 }
 
 int Aircraft::allDamage()
 {
     return (_ammo * _baseDamage);
-}
-
-bool Aircraft::isPriority()
-{
-    if(_type == f35)
-        return true;
-    else
-        return false;
-
 }
 
 int Aircraft::neededAmmo()

@@ -17,15 +17,15 @@ public:
 
     int refill(int refill);
 
-    int refillIfNotEnough(int refill);
+    int refillPriority(int refill);
 
-    std::string getType();
+    virtual std::string getType() = 0;
 
     std::string getStatus();
 
     int allDamage();
 
-    bool isPriority();
+    virtual bool isPriority() = 0;
 
     int neededAmmo();
 
@@ -33,7 +33,6 @@ protected:
     int _maxAmmo;
     int _baseDamage;
     int _ammo;
-    Type _type;
 };
 
 
