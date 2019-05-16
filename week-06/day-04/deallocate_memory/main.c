@@ -26,7 +26,7 @@ int main()
 
     pointer = realloc(pointer, 0);
     pointer = NULL;
-    
+
 
     return 0;
 }
