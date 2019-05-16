@@ -10,11 +10,17 @@ int main()
 {
     int* pointer = NULL;
     pointer = (int *)malloc(10 * sizeof(int));
-    for (int i = 0; i < 5; ++i) {
-        pointer[i] = i;
+
+    if (!(int *)malloc(10 * sizeof(int))) {
+        printf("%s\n", "Error occurred while allocating memory");
+    } else {
+        for (int i = 0; i < 5; ++i) {
+            pointer[i] = i;
+        }
     }
+
     for (int j = 0; j < 5; ++j) {
-        printf("%d\n", pointer[j]);
+        printf("%d, ", pointer[j]);
     }
 
     free(pointer);
