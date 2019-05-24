@@ -5,14 +5,13 @@
 #include <stdio.h>
 
 GPIO_InitTypeDef user_button_handle;
-RNG_HandleTypeDef rng;
+RNG_HandleTypeDef random_number;
 
 static void Error_Handler(void);
 static void SystemClock_Config(void);
 
 volatile uint32_t start_time;
 volatile uint32_t reaction_time;
-volatile uint32_t random_number;
 
 void init_user_button(void)
 {
@@ -39,14 +38,11 @@ void LCD_init()
 	BSP_LCD_SetTextColor(LCD_COLOR_BLUE);
 }
 
-void init_rng(void)
+void init_time_delay(void)
 {
-	uint32_t number;
 	__HAL_RCC_RNG_CLK_ENABLE();
-	rng.Instance = RNG;
+	random_number.Instance = RNG;
 	HAL_RNG_Init(&random_number);
-	number = HAL_RNG_GetRandomNumber(&random_number);
-	random_number = (number % 10000);
 }
 
 int main(void)
@@ -56,7 +52,7 @@ int main(void)
 
 	LCD_init();
 	init_user_button();
-	init_rng();
+	init_time_delay();
 
 	BSP_LCD_DisplayStringAt(50, 50, "Reaction test game:", LEFT_MODE);
 	HAL_Delay(3000);
@@ -69,9 +65,11 @@ int main(void)
 
 	int counter = 0;
 
+	uint32_t time_delay = (HAL_RNG_GetRandomNumber(&random_number) % 10000);
+
 	while (1) {
 		while(counter < 1) {
-			HAL_Delay(random_number);
+			HAL_Delay(time_delay);
 			BSP_LCD_SetTextColor(LCD_COLOR_RED);
 			BSP_LCD_FillCircle(250, 150, 30);
 			start_time = HAL_GetTick();
@@ -146,4 +144,3 @@ static void SystemClock_Config(void)
 		Error_Handler();
 	}
 }
-
