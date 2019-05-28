@@ -13,8 +13,8 @@ void init_timer()
     __HAL_RCC_TIM2_CLK_ENABLE();
 
     timer_handle.Instance = TIM2;
-    timer_handle.Init.Prescaler = 10800 - 1;
-    timer_handle.Init.Period = 10000 - 1;
+    timer_handle.Init.Prescaler = 54000 - 1;
+    timer_handle.Init.Period = 2000- 1;
     timer_handle.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
     timer_handle.Init.CounterMode = TIM_COUNTERMODE_UP;
 
@@ -52,7 +52,7 @@ int main(void)
         	HAL_GPIO_WritePin(GPIOF, GPIO_PIN_10, GPIO_PIN_SET);
         	BSP_LED_On(LED_GREEN);
         }
-        if (timer_value == 5000) {
+        if (timer_value == 1000) {
         	HAL_GPIO_WritePin(GPIOF, GPIO_PIN_10, GPIO_PIN_RESET);
         	BSP_LED_Off(LED_GREEN);
         }
